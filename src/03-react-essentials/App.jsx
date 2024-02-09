@@ -1,6 +1,9 @@
 import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcept";
+import TabButton from "./components/TabButton.jsx";
+
+const menuButtons = ["Components", "JSX", "Props", "State"];
 
 function App() {
   return (
@@ -14,6 +17,15 @@ function App() {
               <CoreConcept {...concept} key={index} />
             ))}
           </ul>
+        </section>
+
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            {menuButtons.map((button) => (
+              <TabButton>{button}</TabButton>
+            ))}
+          </menu>
         </section>
       </main>
     </div>
