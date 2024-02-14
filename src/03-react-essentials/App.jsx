@@ -6,6 +6,10 @@ import TabButton from "./components/TabButton.jsx";
 const menuButtons = ["Components", "JSX", "Props", "State"];
 
 function App() {
+  const handleSelect = () => {
+    console.log("Hello world - selected!");
+  };
+
   return (
     <div>
       <Header />
@@ -23,9 +27,10 @@ function App() {
           <h2>Examples</h2>
           <menu>
             {menuButtons.map((button) => (
-              <TabButton>{button}</TabButton>
+              <TabButton onSelect={handleSelect}>{button}</TabButton>
             ))}
           </menu>
+
         </section>
       </main>
     </div>
