@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcept";
@@ -6,8 +8,10 @@ import TabButton from "./components/TabButton.jsx";
 const menuButtons = ["Components", "JSX", "Props", "State"];
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState("Please click a button");
+
   const handleSelect = (selectedButton) => {
-    console.log(selectedButton);
+    setSelectedTopic(selectedButton);
   };
 
   return (
@@ -27,10 +31,13 @@ function App() {
           <h2>Examples</h2>
           <menu>
             {menuButtons.map((buttonName) => (
-              <TabButton onSelect={() => handleSelect(buttonName)}>{buttonName}</TabButton>
+              <TabButton onSelect={() => handleSelect(buttonName)}>
+                {buttonName}
+              </TabButton>
             ))}
           </menu>
 
+          {selectedTopic}
         </section>
       </main>
     </div>
