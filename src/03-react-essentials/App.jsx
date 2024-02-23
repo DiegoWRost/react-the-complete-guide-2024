@@ -33,6 +33,7 @@ function App() {
           <menu>
             {menuButtons.map((buttonName) => (
               <TabButton
+                isSelected={selectedTopic === buttonName.toLowerCase()}
                 onSelect={() => handleSelect(buttonName.toLowerCase())}
               >
                 {buttonName}
@@ -40,7 +41,7 @@ function App() {
             ))}
           </menu>
           {!selectedTopic && <p>Please select a topic</p>}
-          
+
           {selectedTopic && (
             <div id="tab-content">
               <h3>{EXAMPLES[selectedTopic].title}</h3>
