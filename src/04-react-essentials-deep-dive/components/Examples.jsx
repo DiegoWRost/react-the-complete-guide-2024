@@ -19,7 +19,7 @@ export default function Examples() {
         {menuButtons.map((buttonName) => (
           <TabButton
             isSelected={selectedTopic === buttonName.toLowerCase()}
-            onSelect={() => handleSelect(buttonName.toLowerCase())}
+            onClick={() => handleSelect(buttonName.toLowerCase())}
           >
             {buttonName}
           </TabButton>
