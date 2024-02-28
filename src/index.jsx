@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 
-import App from "./03-react-essentials/App"
-import "./03-react-essentials/index.css";
+import App from "./04-react-essentials-deep-dive/App"
+import "./04-react-essentials-deep-dive/index.css";
 
 const entryPoint = document.getElementById("root");
 ReactDOM.createRoot(entryPoint).render(<App />);
