@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import TabButton from "./TabButton";
+import Section from "./Section";
 import { EXAMPLES } from "../data";
 
 const menuButtons = ["Components", "JSX", "Props", "State"];
@@ -13,8 +14,7 @@ export default function Examples() {
   };
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title="Examples" id="examples">
       <menu>
         {menuButtons.map((buttonName) => (
           <TabButton
@@ -36,6 +36,6 @@ export default function Examples() {
           </pre>
         </div>
       )}
-    </section>
+    </Section>
   );
 }
